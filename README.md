@@ -31,3 +31,16 @@ The Zero-Fill menu is located under the Processing tab then Zero-Fill/LP. LP is 
 1. Check the format of the dataset
 2. Define the role of Fourier transform
 3. Check how to 
+
+
+### Encountered Error - 1
+
+RuntimeError: expected scalar type Double but found Float
+
+Solution: use `.float()` when we transfer from numpy to torch tensor
+
+```python
+noisy_torch = torch.from_numpy(xHat).float()
+```
+
+## Realization
