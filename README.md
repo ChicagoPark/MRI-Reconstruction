@@ -32,6 +32,7 @@ The Zero-Fill menu is located under the Processing tab then Zero-Fill/LP. LP is 
 2. Construct overall model architecture (including normalization)
 3. Study how to implement ResNet from scratch
 4. Plot grid
+5. Separate dataset (Train / Validation / Test)
 
 
 
