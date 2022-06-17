@@ -28,9 +28,14 @@ The Zero-Fill menu is located under the Processing tab then Zero-Fill/LP. LP is 
 
 
 [Things to do]
-1. Check the format of the dataset
-2. Define the role of Fourier transform
-3. Check how to 
+1. Define Loss function
+2. Construct overall model architecture (including normalization)
+3. Study how to implement ResNet from scratch
+4. Plot grid
+
+
+
+
 
 
 ### Encountered Error - 1
