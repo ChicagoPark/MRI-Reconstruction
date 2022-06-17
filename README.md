@@ -14,7 +14,7 @@ Magnetic Resonance Imaging(MRI) reconstruction = Inverse problem
 
 Role of CNN(f_theta): 
 input data of CNN: `x_hat` through inverse Fourier transform
-Ouput data of CNN: x
+Output data of CNN: x
 Recover image x from y
 
 How to get zero-filled images
