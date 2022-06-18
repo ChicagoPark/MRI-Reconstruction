@@ -49,4 +49,11 @@ Solution: use `.float()` when we transfer from numpy to torch tensor
 noisy_torch = torch.from_numpy(xHat).float()
 ```
 
+conv2d() received an invalid combination of arguments
+
+Solution: padding was floating point by mistake.
+
+
 ## Realization
+
+
