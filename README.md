@@ -6,9 +6,17 @@
 
 ----
 
-## [0] Problem Analysis
+## Problem Analysis
 
-#### [0-1] Dataset
+#### [1] `Terminology Definition`
+* P: Sampling operator
+* F: Fourier transform
+* x: input image
+* e: noise vector
+
+
+
+#### [2] `Dataset`
 
 > Use trnOrg and trnMask for training only. Divide tstOrg and tstMast into the Validation set and Test set.
 
@@ -18,25 +26,25 @@
 | 69 %          | 20 %           | 11 %      |
 
 
-#### [0-2] Data Preprocessing
+#### [3] Data Preprocessing
 
 > (1) In supervised learning-based reconstruction task, it is necessary to `pair input and output dataset`.
 > 
 > (2) As we have `ground-truth` MRI, we will give deformation through Fourier Transform and Inverse Fourier Transform to the ground-truth for matched output data. We will call that data `X hat`.
 
 
-[Terminology Definition]
-1. P: Sampling operator
-2. F: Fourier transform
-3. x: input image
-4. e: noise vector
+#### [4] Model
+> This project utilizes CNN with Residual structure for the deep network and overcomes vanishing gradient problems.
 
 
-Role of CNN(f_theta): 
-input data of CNN: `x_hat` through inverse Fourier transform
-Output data of CNN: x
-Recover image x from y
 
+| Detail implementation  | Loss function module|
+|          :---:         |          :---:      |
+|       Project.ipynb    |         test.py     |
+
+
+
+<!--
 How to get zero-filled images
 
 Zero-Fill
@@ -46,6 +54,7 @@ Zero-Filling can improve data quality by increasing the amount of points per ppm
 
 The Zero-Fill menu is located under the Processing tab then Zero-Fill/LP. LP is Linear Prediction which is discussed here:
 
+-->
 
 [Things to do]
 1. Define Loss function (Done)
