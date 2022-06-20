@@ -43,6 +43,20 @@
 |       Project.ipynb    |         test.py     |
 
 
+----
+
+## Step-by-Step Instructions
+
+### [1] Visualize x hat
+
+
+
+### [2] Performance evaluation by PSNR and SSIM
+
+
+
+
+
 
 <!--
 How to get zero-filled images
@@ -54,18 +68,12 @@ Zero-Filling can improve data quality by increasing the amount of points per ppm
 
 The Zero-Fill menu is located under the Processing tab then Zero-Fill/LP. LP is Linear Prediction which is discussed here:
 
--->
-
 [Things to do]
 1. Define Loss function (Done)
 2. Construct overall model architecture (including normalization)
 3. Study how to implement ResNet from scratch
 4. Plot grid
 5. Separate dataset (Train / Validation / Test)
-
-
-
-
 
 
 ### Encountered Error - 1
@@ -84,5 +92,9 @@ Solution: padding was floating point by mistake.
 
 
 ## Realization
+
+-->
+
+
 
 
