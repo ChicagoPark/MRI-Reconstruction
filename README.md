@@ -10,8 +10,13 @@
 
 #### [0-1] Dataset
 
-trnOrg: 360, 256, 232
-tstOrg: 164, 256, 232
+> Use trnOrg and trnMask for training only. Divide tstOrg and tstMast into the Validation set and Test set.
+
+| Training set  | Validation set | Test set  |
+| :---:         |     :---:      |    :---:  |
+| 360 frames    | 105 frames     | 59 frames |
+| 69 %          | 20 %           | 11 %      |
+
 
 #### [0-2] Data Preprocessing
 
