@@ -10,6 +10,11 @@
 
 #### [0-1] Dataset
 
+trnOrg: 360, 256, 232
+tstOrg: 164, 256, 232
+
+#### [0-2] Data Preprocessing
+
 > (1) In supervised learning-based reconstruction task, it is necessary to `pair input and output dataset`.
 > 
 > (2) As we have `ground-truth` MRI, we will give deformation through Fourier Transform and Inverse Fourier Transform to the ground-truth for matched output data. We will call that data `X hat`.
