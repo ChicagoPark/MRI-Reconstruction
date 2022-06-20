@@ -1,8 +1,18 @@
 # CIGProject
 
-Problem solving techniques
+##### Project Topic:  Deep `Supervised Learning` for `MRI Reconstruction`
 
-Magnetic Resonance Imaging(MRI) reconstruction = Inverse problem
+##### Project Supervisor: `Weijie Gan`
+
+----
+
+## [0] Problem Analysis
+
+#### [0-1] Dataset
+
+> (1) In supervised learning-based reconstruction task, it is necessary to `pair input and output dataset`.
+> 
+> (2) As we have `ground-truth` MRI, we will give deformation through Fourier Transform and Inverse Fourier Transform to the ground-truth for matched output data. We will call that data `X hat`.
 
 
 [Terminology Definition]
