@@ -49,13 +49,16 @@
 
 ### [1] Visualize x hat
 
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/174622576-b546e207-4fd8-4976-b815-02e0aaae9f1f.png">
 
 
 ### [2] Performance evaluation by PSNR and SSIM
 
+> Inside of the Project.ipynb
 
+### [3] Visualizing test result
 
-
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/174622993-99989c2a-4f19-44ef-9acf-ac7a553bdbb7.png">
 
 
 <!--
