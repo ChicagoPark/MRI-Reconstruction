@@ -30,7 +30,7 @@
 
 > (1) In supervised learning-based reconstruction task, it is necessary to `pair input and output dataset`.
 > 
-> (2) As we have `ground-truth` MRI, we will give deformation through Fourier Transform and Inverse Fourier Transform to the ground-truth for matched output data. We will call that data `X hat`.
+> (2) As we have `ground-truth` MRI, we will match zero-filled images to the ground-truth. We will call that input data `X hat`.
 
 
 #### [4] Model
