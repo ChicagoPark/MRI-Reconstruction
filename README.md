@@ -67,6 +67,8 @@
 
 #### 1. Deep learning for `reconstruction module` should be explored more.
 
+    Need to read reconstruction papers to understand what is their key idea to improve the quality of output image
+
 #### 2. `Signal Processing` Knowledge should be studied simultaneously
 
 #### 3. Broaden `MRI Knowledge`
