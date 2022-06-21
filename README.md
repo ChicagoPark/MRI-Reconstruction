@@ -61,6 +61,21 @@
 > <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/174622993-99989c2a-4f19-44ef-9acf-ac7a553bdbb7.png">
 
 
+
+
+## Review
+
+#### 1. Deep learning for `reconstruction module` should be explored more.
+
+#### 2. `Signal Processing` Knowledge should be studied simultaneously
+
+#### 3. Broaden `MRI Knowledge`
+
+#### 4. ...
+
+
+
+
 <!--
 How to get zero-filled images
 
@@ -94,13 +109,6 @@ conv2d() received an invalid combination of arguments
 Solution: padding was floating point by mistake.
 
 
-## Review
-
-#### 1. Deep learning for reconstruction module should be explored more.
-
-#### 2. Signal Processing Knowledge should be studied simultaneously
-
-#### 3. 
 
 -->
 
