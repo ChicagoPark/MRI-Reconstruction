@@ -94,7 +94,13 @@ conv2d() received an invalid combination of arguments
 Solution: padding was floating point by mistake.
 
 
-## Realization
+## Review
+
+#### 1. Deep learning for reconstruction module should be explored more.
+
+#### 2. Signal Processing Knowledge should be studied simultaneously
+
+#### 3. 
 
 -->
 
