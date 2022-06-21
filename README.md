@@ -20,7 +20,7 @@
 
 > Use trnOrg and trnMask for training only. Divide tstOrg and tstMast into the Validation set and Test set.
 
-| Training set  | Validation set | Test set  |
+|      `Training set`  |         `Validation set` |      `Test set`  |
 | :---:         |     :---:      |    :---:  |
 | 360 frames    | 105 frames     | 59 frames |
 | 69 %          | 20 %           | 11 %      |
@@ -70,8 +70,6 @@
 #### 2. `Signal Processing` Knowledge should be studied simultaneously
 
 #### 3. Broaden `MRI Knowledge`
-
-#### 4. ...
 
 
 
