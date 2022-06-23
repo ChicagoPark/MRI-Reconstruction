@@ -5,6 +5,15 @@
 ##### Project Supervisor: `Weijie Gan`
 
 ----
+## Priority
+
+1. Utilize Complex Value
+
+2. Visualize the trained result
+
+3. Normalize the input of PSNR and SSIM
+
+----
 
 ## Problem Analysis
 
