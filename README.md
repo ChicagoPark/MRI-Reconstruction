@@ -5,6 +5,14 @@
 ##### Project Supervisor: `Weijie Gan`
 
 ----
+
+## Study
+1. Fourier Transform Shift
+2. Fourier Inverse Transform Shift
+3. Complex training
+4. Paper reading
+
+----
 ## Priority
 
 1. Utilize Complex Value
