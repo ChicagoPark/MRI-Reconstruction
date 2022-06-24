@@ -10,7 +10,7 @@
 1. Fourier Transform Shift
 2. Fourier Inverse Transform Shift
 3. Complex training
-4. Paper reading
+4. Read more review paper of MRI Reconstruction 
 
 ----
 ## Priority
