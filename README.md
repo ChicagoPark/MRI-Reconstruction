@@ -54,11 +54,12 @@
 
 ----
 
+
 ## Step-by-Step Instructions
 
 ### [1] Visualize x hat
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/174923579-b3966438-6de2-4cbb-9f05-8a59f9fe8af4.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175498260-77506634-dc1c-4194-b86b-f4d9671f3bfb.png">
 
 
 ### [2] Performance evaluation by PSNR and SSIM
