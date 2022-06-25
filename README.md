@@ -67,8 +67,11 @@
 
 ### [1] Visualize x hat
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175498260-77506634-dc1c-4194-b86b-f4d9671f3bfb.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175773732-034931cf-e4fa-48c6-b3d2-4727f35e46c9.png">
 
+<!--
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175498260-77506634-dc1c-4194-b86b-f4d9671f3bfb.png">
+-->
 
 ### [2] Performance evaluation by PSNR and SSIM
 
