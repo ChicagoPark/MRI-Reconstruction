@@ -79,7 +79,11 @@
 
 ### [3] Visualizing test result
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/174622993-99989c2a-4f19-44ef-9acf-ac7a553bdbb7.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175973522-604b7dd3-90b6-41fd-92d5-6ddd3de8855d.png">
+
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175973530-4512f790-74de-48dc-ad02-f4721a961101.png">
+
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175973538-33cdb84e-bd00-4b81-8f98-55da6a381143.png">
 
 
 
