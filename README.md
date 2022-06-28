@@ -7,7 +7,7 @@
 
 
 ----
-## Priority in Project
+## Thing to do Priority in Project
 
 1. Utilize Complex Value in training process
 ----
