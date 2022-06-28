@@ -4,23 +4,12 @@
 
 ##### Project Supervisor: `Weijie Gan`
 
-----
 
-## Study
-1. Fourier Transform Shift
-2. Fourier Inverse Transform Shift
-3. Complex training
-4. Read more review paper of MRI Reconstruction 
 
 ----
-## Priority
+## Priority in Project
 
-1. Utilize Complex Value
-
-2. Visualize the trained result
-
-3. Normalize the input of PSNR and SSIM
-
+1. Utilize Complex Value in training process
 ----
 
 ## Problem Analysis
@@ -85,14 +74,18 @@
 
 > <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176088180-c8b486c0-e030-47d5-a804-11e50b429c38.png">
 
+### [4] Trained Model
 
-## Review
-
-#### 1. Study (inverse) Fourier Transform and shift
-
-#### 2. Analyze MRI Data such as K-space and so on.
+[Trained Model](https://drive.google.com/file/d/1QafuQNXkmo87cMRpaoJnZc6esszIXFpz/view?usp=sharing)
 
 
+
+## Review & Study
+1. Fourier Transform Shift
+2. Fourier Inverse Transform Shift
+3. Complex Value training
+4. Read more review paper of MRI Reconstruction 
+5. Analyze MRI Data such as K-space and so on.
 
 
 <!--
