@@ -75,15 +75,15 @@
 
 ### [2] Performance evaluation by PSNR and SSIM
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176066233-6189173a-2523-481f-9ca1-c8f4116650c0.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176088132-40298521-2ac6-4d56-aaf8-074adcdaaacd.png">
 
 ### [3] Visualizing test result
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176066263-cdc5a705-bdc6-47ca-8c09-0e76c9e7ce6d.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176088171-faab6e31-fbaa-45dd-b8e3-e25a53409e40.png">
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176066268-2e93cc72-f684-49af-80cf-8ae0bb679a7b.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176088176-55728779-2b8c-4ceb-bcfc-cf8c070d2596.png">
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176066256-96370b65-6a0c-40e4-ae4a-28cc13a73670.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176088180-c8b486c0-e030-47d5-a804-11e50b429c38.png">
 
 
 ## Review
