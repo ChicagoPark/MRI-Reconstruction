@@ -4,8 +4,6 @@
 
 ##### Project Supervisor: `Weijie Gan`
 
-
-
 ----
 ## Thing to do Priority in Project
 
