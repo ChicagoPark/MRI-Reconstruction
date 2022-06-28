@@ -75,17 +75,15 @@
 
 ### [2] Performance evaluation by PSNR and SSIM
 
-> Inside of the Project.ipynb
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176066233-6189173a-2523-481f-9ca1-c8f4116650c0.png">
 
 ### [3] Visualizing test result
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175973522-604b7dd3-90b6-41fd-92d5-6ddd3de8855d.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176066263-cdc5a705-bdc6-47ca-8c09-0e76c9e7ce6d.png">
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175973530-4512f790-74de-48dc-ad02-f4721a961101.png">
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176066268-2e93cc72-f684-49af-80cf-8ae0bb679a7b.png">
 
-> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/175973538-33cdb84e-bd00-4b81-8f98-55da6a381143.png">
-
-
+> <img width="450" alt="IMG" src="https://user-images.githubusercontent.com/73331241/176066256-96370b65-6a0c-40e4-ae4a-28cc13a73670.png">
 
 
 ## Review
