@@ -1,4 +1,4 @@
-# CIGProject
+# MRI Reconstruction
 
 ##### Project Topic:  Deep `Supervised Learning` for `MRI Reconstruction`
 
