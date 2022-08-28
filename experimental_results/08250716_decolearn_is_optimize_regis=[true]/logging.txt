@@ -1,0 +1,2436 @@
+2022-08-25 07:17:27,972 Module Structure 
+
+unet_model.enc.0.main.weight: <class 'torch.Tensor'> torch.Size([16, 2, 4, 4])
+unet_model.enc.0.main.bias: <class 'torch.Tensor'> torch.Size([16])
+unet_model.enc.1.main.weight: <class 'torch.Tensor'> torch.Size([32, 16, 4, 4])
+unet_model.enc.1.main.bias: <class 'torch.Tensor'> torch.Size([32])
+unet_model.enc.2.main.weight: <class 'torch.Tensor'> torch.Size([32, 32, 4, 4])
+unet_model.enc.2.main.bias: <class 'torch.Tensor'> torch.Size([32])
+unet_model.enc.3.main.weight: <class 'torch.Tensor'> torch.Size([32, 32, 4, 4])
+unet_model.enc.3.main.bias: <class 'torch.Tensor'> torch.Size([32])
+unet_model.dec.0.main.weight: <class 'torch.Tensor'> torch.Size([32, 32, 3, 3])
+unet_model.dec.0.main.bias: <class 'torch.Tensor'> torch.Size([32])
+unet_model.dec.1.main.weight: <class 'torch.Tensor'> torch.Size([32, 64, 3, 3])
+unet_model.dec.1.main.bias: <class 'torch.Tensor'> torch.Size([32])
+unet_model.dec.2.main.weight: <class 'torch.Tensor'> torch.Size([32, 64, 3, 3])
+unet_model.dec.2.main.bias: <class 'torch.Tensor'> torch.Size([32])
+unet_model.dec.3.main.weight: <class 'torch.Tensor'> torch.Size([32, 48, 3, 3])
+unet_model.dec.3.main.bias: <class 'torch.Tensor'> torch.Size([32])
+unet_model.dec.4.main.weight: <class 'torch.Tensor'> torch.Size([32, 32, 3, 3])
+unet_model.dec.4.main.bias: <class 'torch.Tensor'> torch.Size([32])
+unet_model.dec.5.main.weight: <class 'torch.Tensor'> torch.Size([16, 34, 3, 3])
+unet_model.dec.5.main.bias: <class 'torch.Tensor'> torch.Size([16])
+unet_model.vm2_conv.main.weight: <class 'torch.Tensor'> torch.Size([16, 16, 3, 3])
+unet_model.vm2_conv.main.bias: <class 'torch.Tensor'> torch.Size([16])
+flow.weight: <class 'torch.Tensor'> torch.Size([2, 16, 3, 3])
+flow.bias: <class 'torch.Tensor'> torch.Size([2])
+
+
+2022-08-25 07:17:27,977 Module Params Amount: 118,386
+
+2022-08-25 07:17:27,981 Configuration 
+
+{'dataset': {'input_snr': 40,
+             'mask_fold': 3,
+             'mask_type': 'cartesian',
+             'multi_coil': True,
+             'root_path': './dataset/',
+             'synthetic': {'P': 1966,
+                           'rotate': 0,
+                           'scale': 0,
+                           'sigma': 18,
+                           'theta': 10,
+                           'translation': [0, 0]}},
+ 'method': {'lambda_': 6,
+            'loss_recon_consensus': 0.2,
+            'loss_regis_dice': 0,
+            'loss_regis_mse': 0,
+            'loss_regis_ncc': 1,
+            'proposed': {'is_optimize_regis': True,
+                         'recon_batch': 1,
+                         'regis_batch': 1}},
+ 'module': {'recon': {'EDSR': {'n_feats': 64, 'n_resblocks': 9, 'res_scale': 1},
+                      'recon_net': 'EDSR'},
+            'regis': {'nf_dec': [32, 32, 32, 32, 32, 16, 16],
+                      'nf_enc': [16, 32, 32, 32]}},
+ 'setting': {'gpu_index': '1',
+             'method': 'DeCoLearn',
+             'mode': 'train',
+             'root_path': './experimental_results/',
+             'save_folder': '08250716_decolearn_is_optimize_regis=[true]'},
+ 'test': {'desc': '',
+          'is_save_mat': False,
+          'recon_checkpoint': 'recon_model/best_valid_psnr.pt',
+          'regis_checkpoint': 'regis_model/best_valid_psnr.pt'},
+ 'train': {'batch_size': 1,
+           'checkpoint_epoch': 10,
+           'num_workers': 0,
+           'recon_loss': 'smooth_l1',
+           'recon_lr': 0.0003,
+           'regis_loss': None,
+           'regis_lr': 0.0005,
+           'tensorboard_batch': 50,
+           'train_epoch': 100,
+           'verbose_batch': 10}}
+
+2022-08-25 07:17:28,130 Module Structure 
+
+du_block.0.nn.head.0.weight: <class 'torch.Tensor'> torch.Size([64, 2, 3, 3])
+du_block.0.nn.head.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.0.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.0.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.0.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.0.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.1.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.1.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.1.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.1.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.2.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.2.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.2.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.2.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.3.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.3.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.3.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.3.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.4.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.4.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.4.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.4.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.5.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.5.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.5.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.5.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.6.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.6.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.6.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.6.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.7.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.7.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.7.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.7.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.8.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.8.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.8.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.8.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.body.9.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.0.nn.body.9.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.0.nn.tail.0.weight: <class 'torch.Tensor'> torch.Size([2, 64, 3, 3])
+du_block.0.nn.tail.0.bias: <class 'torch.Tensor'> torch.Size([2])
+du_block.1.nn.head.0.weight: <class 'torch.Tensor'> torch.Size([64, 2, 3, 3])
+du_block.1.nn.head.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.0.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.0.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.0.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.0.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.1.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.1.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.1.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.1.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.2.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.2.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.2.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.2.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.3.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.3.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.3.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.3.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.4.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.4.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.4.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.4.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.5.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.5.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.5.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.5.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.6.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.6.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.6.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.6.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.7.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.7.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.7.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.7.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.8.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.8.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.8.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.8.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.body.9.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.1.nn.body.9.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.1.nn.tail.0.weight: <class 'torch.Tensor'> torch.Size([2, 64, 3, 3])
+du_block.1.nn.tail.0.bias: <class 'torch.Tensor'> torch.Size([2])
+du_block.2.nn.head.0.weight: <class 'torch.Tensor'> torch.Size([64, 2, 3, 3])
+du_block.2.nn.head.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.0.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.0.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.0.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.0.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.1.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.1.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.1.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.1.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.2.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.2.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.2.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.2.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.3.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.3.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.3.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.3.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.4.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.4.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.4.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.4.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.5.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.5.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.5.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.5.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.6.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.6.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.6.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.6.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.7.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.7.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.7.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.7.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.8.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.8.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.8.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.8.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.body.9.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.2.nn.body.9.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.2.nn.tail.0.weight: <class 'torch.Tensor'> torch.Size([2, 64, 3, 3])
+du_block.2.nn.tail.0.bias: <class 'torch.Tensor'> torch.Size([2])
+du_block.3.nn.head.0.weight: <class 'torch.Tensor'> torch.Size([64, 2, 3, 3])
+du_block.3.nn.head.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.0.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.0.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.0.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.0.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.1.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.1.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.1.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.1.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.2.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.2.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.2.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.2.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.3.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.3.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.3.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.3.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.4.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.4.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.4.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.4.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.5.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.5.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.5.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.5.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.6.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.6.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.6.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.6.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.7.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.7.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.7.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.7.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.8.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.8.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.8.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.8.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.body.9.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.3.nn.body.9.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.3.nn.tail.0.weight: <class 'torch.Tensor'> torch.Size([2, 64, 3, 3])
+du_block.3.nn.tail.0.bias: <class 'torch.Tensor'> torch.Size([2])
+du_block.4.nn.head.0.weight: <class 'torch.Tensor'> torch.Size([64, 2, 3, 3])
+du_block.4.nn.head.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.0.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.0.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.0.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.0.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.1.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.1.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.1.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.1.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.2.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.2.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.2.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.2.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.3.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.3.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.3.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.3.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.4.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.4.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.4.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.4.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.5.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.5.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.5.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.5.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.6.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.6.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.6.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.6.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.7.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.7.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.7.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.7.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.8.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.8.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.8.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.8.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.body.9.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.4.nn.body.9.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.4.nn.tail.0.weight: <class 'torch.Tensor'> torch.Size([2, 64, 3, 3])
+du_block.4.nn.tail.0.bias: <class 'torch.Tensor'> torch.Size([2])
+du_block.5.nn.head.0.weight: <class 'torch.Tensor'> torch.Size([64, 2, 3, 3])
+du_block.5.nn.head.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.0.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.0.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.0.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.0.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.1.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.1.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.1.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.1.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.2.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.2.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.2.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.2.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.3.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.3.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.3.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.3.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.4.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.4.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.4.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.4.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.5.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.5.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.5.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.5.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.6.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.6.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.6.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.6.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.7.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.7.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.7.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.7.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.8.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.8.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.8.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.8.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.body.9.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.5.nn.body.9.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.5.nn.tail.0.weight: <class 'torch.Tensor'> torch.Size([2, 64, 3, 3])
+du_block.5.nn.tail.0.bias: <class 'torch.Tensor'> torch.Size([2])
+du_block.6.nn.head.0.weight: <class 'torch.Tensor'> torch.Size([64, 2, 3, 3])
+du_block.6.nn.head.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.0.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.0.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.0.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.0.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.1.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.1.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.1.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.1.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.2.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.2.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.2.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.2.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.3.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.3.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.3.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.3.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.4.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.4.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.4.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.4.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.5.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.5.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.5.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.5.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.6.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.6.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.6.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.6.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.7.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.7.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.7.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.7.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.8.body.0.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.8.body.0.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.8.body.2.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.8.body.2.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.body.9.weight: <class 'torch.Tensor'> torch.Size([64, 64, 3, 3])
+du_block.6.nn.body.9.bias: <class 'torch.Tensor'> torch.Size([64])
+du_block.6.nn.tail.0.weight: <class 'torch.Tensor'> torch.Size([2, 64, 3, 3])
+du_block.6.nn.tail.0.bias: <class 'torch.Tensor'> torch.Size([2])
+
+
+2022-08-25 07:17:28,171 Module Params Amount: 4,928,014
+
+2022-08-25 07:17:28,174 Configuration 
+
+{'dataset': {'input_snr': 40,
+             'mask_fold': 3,
+             'mask_type': 'cartesian',
+             'multi_coil': True,
+             'root_path': './dataset/',
+             'synthetic': {'P': 1966,
+                           'rotate': 0,
+                           'scale': 0,
+                           'sigma': 18,
+                           'theta': 10,
+                           'translation': [0, 0]}},
+ 'method': {'lambda_': 6,
+            'loss_recon_consensus': 0.2,
+            'loss_regis_dice': 0,
+            'loss_regis_mse': 0,
+            'loss_regis_ncc': 1,
+            'proposed': {'is_optimize_regis': True,
+                         'recon_batch': 1,
+                         'regis_batch': 1}},
+ 'module': {'recon': {'EDSR': {'n_feats': 64, 'n_resblocks': 9, 'res_scale': 1},
+                      'recon_net': 'EDSR'},
+            'regis': {'nf_dec': [32, 32, 32, 32, 32, 16, 16],
+                      'nf_enc': [16, 32, 32, 32]}},
+ 'setting': {'gpu_index': '1',
+             'method': 'DeCoLearn',
+             'mode': 'train',
+             'root_path': './experimental_results/',
+             'save_folder': '08250716_decolearn_is_optimize_regis=[true]'},
+ 'test': {'desc': '',
+          'is_save_mat': False,
+          'recon_checkpoint': 'recon_model/best_valid_psnr.pt',
+          'regis_checkpoint': 'regis_model/best_valid_psnr.pt'},
+ 'train': {'batch_size': 1,
+           'checkpoint_epoch': 10,
+           'num_workers': 0,
+           'recon_loss': 'smooth_l1',
+           'recon_lr': 0.0003,
+           'regis_loss': None,
+           'regis_lr': 0.0005,
+           'tensorboard_batch': 50,
+           'train_epoch': 100,
+           'verbose_batch': 10}}
+
+2022-08-25 07:25:10,902 
+===============================
+  [BaseLogger] [001/100]
+===============================
+[registration_loss]: [-0.300256]
+[reconstruction_loss]: [3.072492]
+[train_ssim]: [0.131450]
+[train_psnr]: [12.109624]
+[valid_ssim]: [0.151800]
+[valid_psnr]: [17.838464]
+
+2022-08-25 07:25:11,933 
+===============================
+  [ModelCheckpoint] [001/100]
+===============================
+[valid_psnr] Improved: [-inf] -> [17.83846] 
+[valid_ssim] Improved: [-inf] -> [0.15180] 
+
+2022-08-25 07:25:12,059 
+===============================
+  [ModelCheckpoint] [001/100]
+===============================
+[valid_psnr] Improved: [-inf] -> [17.83846] 
+[valid_ssim] Improved: [-inf] -> [0.15180] 
+
+2022-08-25 07:25:12,060 
+===============================
+  [BaseLogger] [001/100]
+===============================
+[registration_loss]: [-0.300256]
+[reconstruction_loss]: [3.072492]
+[train_ssim]: [0.131450]
+[train_psnr]: [12.109624]
+[valid_ssim]: [0.151800]
+[valid_psnr]: [17.838464]
+
+2022-08-25 07:33:01,754 
+===============================
+  [BaseLogger] [002/100]
+===============================
+[registration_loss]: [-0.322909]
+[reconstruction_loss]: [3.031021]
+[train_ssim]: [0.121148]
+[train_psnr]: [12.540453]
+[valid_ssim]: [0.114558]
+[valid_psnr]: [9.163894]
+
+2022-08-25 07:33:02,778 
+===============================
+  [ModelCheckpoint] [002/100]
+===============================
+[valid_psnr] Maintained: Current is [9.16389] Best is [17.83846] in Epoch [00001] 
+[valid_ssim] Maintained: Current is [0.11456] Best is [0.15180] in Epoch [00001] 
+
+2022-08-25 07:33:02,825 
+===============================
+  [ModelCheckpoint] [002/100]
+===============================
+[valid_psnr] Maintained: Current is [9.16389] Best is [17.83846] in Epoch [00001] 
+[valid_ssim] Maintained: Current is [0.11456] Best is [0.15180] in Epoch [00001] 
+
+2022-08-25 07:33:02,827 
+===============================
+  [BaseLogger] [002/100]
+===============================
+[registration_loss]: [-0.322909]
+[reconstruction_loss]: [3.031021]
+[train_ssim]: [0.121148]
+[train_psnr]: [12.540453]
+[valid_ssim]: [0.114558]
+[valid_psnr]: [9.163894]
+
+2022-08-25 07:40:43,675 
+===============================
+  [BaseLogger] [003/100]
+===============================
+[registration_loss]: [-0.489044]
+[reconstruction_loss]: [2.840617]
+[train_ssim]: [0.212233]
+[train_psnr]: [16.306560]
+[valid_ssim]: [0.639434]
+[valid_psnr]: [23.900202]
+
+2022-08-25 07:40:44,528 
+===============================
+  [ModelCheckpoint] [003/100]
+===============================
+[valid_psnr] Improved: [17.83846] -> [23.90020] 
+[valid_ssim] Improved: [0.15180] -> [0.63943] 
+
+2022-08-25 07:40:44,672 
+===============================
+  [ModelCheckpoint] [003/100]
+===============================
+[valid_psnr] Improved: [17.83846] -> [23.90020] 
+[valid_ssim] Improved: [0.15180] -> [0.63943] 
+
+2022-08-25 07:40:44,673 
+===============================
+  [BaseLogger] [003/100]
+===============================
+[registration_loss]: [-0.489044]
+[reconstruction_loss]: [2.840617]
+[train_ssim]: [0.212233]
+[train_psnr]: [16.306560]
+[valid_ssim]: [0.639434]
+[valid_psnr]: [23.900202]
+
+2022-08-25 07:49:57,450 
+===============================
+  [BaseLogger] [004/100]
+===============================
+[registration_loss]: [-0.716279]
+[reconstruction_loss]: [2.316060]
+[train_ssim]: [0.443268]
+[train_psnr]: [23.639190]
+[valid_ssim]: [0.395601]
+[valid_psnr]: [23.813988]
+
+2022-08-25 07:49:58,286 
+===============================
+  [ModelCheckpoint] [004/100]
+===============================
+[valid_psnr] Maintained: Current is [23.81399] Best is [23.90020] in Epoch [00003] 
+[valid_ssim] Maintained: Current is [0.39560] Best is [0.63943] in Epoch [00003] 
+
+2022-08-25 07:49:58,326 
+===============================
+  [ModelCheckpoint] [004/100]
+===============================
+[valid_psnr] Maintained: Current is [23.81399] Best is [23.90020] in Epoch [00003] 
+[valid_ssim] Maintained: Current is [0.39560] Best is [0.63943] in Epoch [00003] 
+
+2022-08-25 07:49:58,328 
+===============================
+  [BaseLogger] [004/100]
+===============================
+[registration_loss]: [-0.716279]
+[reconstruction_loss]: [2.316060]
+[train_ssim]: [0.443268]
+[train_psnr]: [23.639190]
+[valid_ssim]: [0.395601]
+[valid_psnr]: [23.813988]
+
+2022-08-25 07:57:46,032 
+===============================
+  [BaseLogger] [005/100]
+===============================
+[registration_loss]: [-0.770862]
+[reconstruction_loss]: [1.789260]
+[train_ssim]: [0.495178]
+[train_psnr]: [25.649930]
+[valid_ssim]: [0.650541]
+[valid_psnr]: [27.950437]
+
+2022-08-25 07:57:48,770 
+===============================
+  [ModelCheckpoint] [005/100]
+===============================
+[valid_psnr] Improved: [23.90020] -> [27.95044] 
+[valid_ssim] Improved: [0.63943] -> [0.65054] 
+
+2022-08-25 07:57:48,895 
+===============================
+  [ModelCheckpoint] [005/100]
+===============================
+[valid_psnr] Improved: [23.90020] -> [27.95044] 
+[valid_ssim] Improved: [0.63943] -> [0.65054] 
+
+2022-08-25 07:57:48,896 
+===============================
+  [BaseLogger] [005/100]
+===============================
+[registration_loss]: [-0.770862]
+[reconstruction_loss]: [1.789260]
+[train_ssim]: [0.495178]
+[train_psnr]: [25.649930]
+[valid_ssim]: [0.650541]
+[valid_psnr]: [27.950437]
+
+2022-08-25 08:05:48,806 
+===============================
+  [BaseLogger] [006/100]
+===============================
+[registration_loss]: [-0.708203]
+[reconstruction_loss]: [1.283888]
+[train_ssim]: [0.677991]
+[train_psnr]: [29.124522]
+[valid_ssim]: [0.726324]
+[valid_psnr]: [28.643671]
+
+2022-08-25 08:05:49,804 
+===============================
+  [ModelCheckpoint] [006/100]
+===============================
+[valid_psnr] Improved: [27.95044] -> [28.64367] 
+[valid_ssim] Improved: [0.65054] -> [0.72632] 
+
+2022-08-25 08:05:49,950 
+===============================
+  [ModelCheckpoint] [006/100]
+===============================
+[valid_psnr] Improved: [27.95044] -> [28.64367] 
+[valid_ssim] Improved: [0.65054] -> [0.72632] 
+
+2022-08-25 08:05:49,952 
+===============================
+  [BaseLogger] [006/100]
+===============================
+[registration_loss]: [-0.708203]
+[reconstruction_loss]: [1.283888]
+[train_ssim]: [0.677991]
+[train_psnr]: [29.124522]
+[valid_ssim]: [0.726324]
+[valid_psnr]: [28.643671]
+
+2022-08-25 08:13:56,238 
+===============================
+  [BaseLogger] [007/100]
+===============================
+[registration_loss]: [-0.700524]
+[reconstruction_loss]: [1.185583]
+[train_ssim]: [0.736717]
+[train_psnr]: [29.783462]
+[valid_ssim]: [0.584113]
+[valid_psnr]: [28.856939]
+
+2022-08-25 08:13:57,076 
+===============================
+  [ModelCheckpoint] [007/100]
+===============================
+[valid_psnr] Improved: [28.64367] -> [28.85694] 
+[valid_ssim] Maintained: Current is [0.58411] Best is [0.72632] in Epoch [00006] 
+
+2022-08-25 08:13:57,162 
+===============================
+  [ModelCheckpoint] [007/100]
+===============================
+[valid_psnr] Improved: [28.64367] -> [28.85694] 
+[valid_ssim] Maintained: Current is [0.58411] Best is [0.72632] in Epoch [00006] 
+
+2022-08-25 08:13:57,163 
+===============================
+  [BaseLogger] [007/100]
+===============================
+[registration_loss]: [-0.700524]
+[reconstruction_loss]: [1.185583]
+[train_ssim]: [0.736717]
+[train_psnr]: [29.783462]
+[valid_ssim]: [0.584113]
+[valid_psnr]: [28.856939]
+
+2022-08-25 08:22:07,527 
+===============================
+  [BaseLogger] [008/100]
+===============================
+[registration_loss]: [-0.710275]
+[reconstruction_loss]: [1.130517]
+[train_ssim]: [0.739194]
+[train_psnr]: [30.120387]
+[valid_ssim]: [0.824996]
+[valid_psnr]: [29.054789]
+
+2022-08-25 08:22:08,539 
+===============================
+  [ModelCheckpoint] [008/100]
+===============================
+[valid_psnr] Improved: [28.85694] -> [29.05479] 
+[valid_ssim] Improved: [0.72632] -> [0.82500] 
+
+2022-08-25 08:22:08,661 
+===============================
+  [ModelCheckpoint] [008/100]
+===============================
+[valid_psnr] Improved: [28.85694] -> [29.05479] 
+[valid_ssim] Improved: [0.72632] -> [0.82500] 
+
+2022-08-25 08:22:08,663 
+===============================
+  [BaseLogger] [008/100]
+===============================
+[registration_loss]: [-0.710275]
+[reconstruction_loss]: [1.130517]
+[train_ssim]: [0.739194]
+[train_psnr]: [30.120387]
+[valid_ssim]: [0.824996]
+[valid_psnr]: [29.054789]
+
+2022-08-25 08:30:20,882 
+===============================
+  [BaseLogger] [009/100]
+===============================
+[registration_loss]: [-0.715497]
+[reconstruction_loss]: [1.081711]
+[train_ssim]: [0.773510]
+[train_psnr]: [30.283147]
+[valid_ssim]: [0.873961]
+[valid_psnr]: [30.184381]
+
+2022-08-25 08:30:21,801 
+===============================
+  [ModelCheckpoint] [009/100]
+===============================
+[valid_psnr] Improved: [29.05479] -> [30.18438] 
+[valid_ssim] Improved: [0.82500] -> [0.87396] 
+
+2022-08-25 08:30:21,918 
+===============================
+  [ModelCheckpoint] [009/100]
+===============================
+[valid_psnr] Improved: [29.05479] -> [30.18438] 
+[valid_ssim] Improved: [0.82500] -> [0.87396] 
+
+2022-08-25 08:30:21,920 
+===============================
+  [BaseLogger] [009/100]
+===============================
+[registration_loss]: [-0.715497]
+[reconstruction_loss]: [1.081711]
+[train_ssim]: [0.773510]
+[train_psnr]: [30.283147]
+[valid_ssim]: [0.873961]
+[valid_psnr]: [30.184381]
+
+2022-08-25 08:38:29,138 
+===============================
+  [BaseLogger] [010/100]
+===============================
+[registration_loss]: [-0.724415]
+[reconstruction_loss]: [1.047133]
+[train_ssim]: [0.771569]
+[train_psnr]: [30.484905]
+[valid_ssim]: [0.867395]
+[valid_psnr]: [31.135256]
+
+2022-08-25 08:38:30,127 
+===============================
+  [ModelCheckpoint] [010/100]
+===============================
+[valid_psnr] Improved: [30.18438] -> [31.13526] 
+[valid_ssim] Maintained: Current is [0.86740] Best is [0.87396] in Epoch [00009] 
+
+2022-08-25 08:38:30,480 
+===============================
+  [ModelCheckpoint] [010/100]
+===============================
+[valid_psnr] Improved: [30.18438] -> [31.13526] 
+[valid_ssim] Maintained: Current is [0.86740] Best is [0.87396] in Epoch [00009] 
+
+2022-08-25 08:38:30,482 
+===============================
+  [BaseLogger] [010/100]
+===============================
+[registration_loss]: [-0.724415]
+[reconstruction_loss]: [1.047133]
+[train_ssim]: [0.771569]
+[train_psnr]: [30.484905]
+[valid_ssim]: [0.867395]
+[valid_psnr]: [31.135256]
+
+2022-08-25 08:46:22,867 
+===============================
+  [BaseLogger] [011/100]
+===============================
+[registration_loss]: [-0.731175]
+[reconstruction_loss]: [1.029696]
+[train_ssim]: [0.770617]
+[train_psnr]: [30.620784]
+[valid_ssim]: [0.778327]
+[valid_psnr]: [30.283118]
+
+2022-08-25 08:46:23,712 
+===============================
+  [ModelCheckpoint] [011/100]
+===============================
+[valid_psnr] Maintained: Current is [30.28312] Best is [31.13526] in Epoch [00010] 
+[valid_ssim] Maintained: Current is [0.77833] Best is [0.87396] in Epoch [00009] 
+
+2022-08-25 08:46:23,753 
+===============================
+  [ModelCheckpoint] [011/100]
+===============================
+[valid_psnr] Maintained: Current is [30.28312] Best is [31.13526] in Epoch [00010] 
+[valid_ssim] Maintained: Current is [0.77833] Best is [0.87396] in Epoch [00009] 
+
+2022-08-25 08:46:23,754 
+===============================
+  [BaseLogger] [011/100]
+===============================
+[registration_loss]: [-0.731175]
+[reconstruction_loss]: [1.029696]
+[train_ssim]: [0.770617]
+[train_psnr]: [30.620784]
+[valid_ssim]: [0.778327]
+[valid_psnr]: [30.283118]
+
+2022-08-25 08:59:18,328 
+===============================
+  [BaseLogger] [012/100]
+===============================
+[registration_loss]: [-0.731464]
+[reconstruction_loss]: [1.010534]
+[train_ssim]: [0.792242]
+[train_psnr]: [30.749435]
+[valid_ssim]: [0.851163]
+[valid_psnr]: [31.043406]
+
+2022-08-25 08:59:19,268 
+===============================
+  [ModelCheckpoint] [012/100]
+===============================
+[valid_psnr] Maintained: Current is [31.04341] Best is [31.13526] in Epoch [00010] 
+[valid_ssim] Maintained: Current is [0.85116] Best is [0.87396] in Epoch [00009] 
+
+2022-08-25 08:59:19,310 
+===============================
+  [ModelCheckpoint] [012/100]
+===============================
+[valid_psnr] Maintained: Current is [31.04341] Best is [31.13526] in Epoch [00010] 
+[valid_ssim] Maintained: Current is [0.85116] Best is [0.87396] in Epoch [00009] 
+
+2022-08-25 08:59:19,311 
+===============================
+  [BaseLogger] [012/100]
+===============================
+[registration_loss]: [-0.731464]
+[reconstruction_loss]: [1.010534]
+[train_ssim]: [0.792242]
+[train_psnr]: [30.749435]
+[valid_ssim]: [0.851163]
+[valid_psnr]: [31.043406]
+
+2022-08-25 09:07:57,217 
+===============================
+  [BaseLogger] [013/100]
+===============================
+[registration_loss]: [-0.740164]
+[reconstruction_loss]: [0.999144]
+[train_ssim]: [0.794985]
+[train_psnr]: [30.764370]
+[valid_ssim]: [0.885621]
+[valid_psnr]: [30.410231]
+
+2022-08-25 09:07:58,148 
+===============================
+  [ModelCheckpoint] [013/100]
+===============================
+[valid_psnr] Maintained: Current is [30.41023] Best is [31.13526] in Epoch [00010] 
+[valid_ssim] Improved: [0.87396] -> [0.88562] 
+
+2022-08-25 09:07:58,235 
+===============================
+  [ModelCheckpoint] [013/100]
+===============================
+[valid_psnr] Maintained: Current is [30.41023] Best is [31.13526] in Epoch [00010] 
+[valid_ssim] Improved: [0.87396] -> [0.88562] 
+
+2022-08-25 09:07:58,236 
+===============================
+  [BaseLogger] [013/100]
+===============================
+[registration_loss]: [-0.740164]
+[reconstruction_loss]: [0.999144]
+[train_ssim]: [0.794985]
+[train_psnr]: [30.764370]
+[valid_ssim]: [0.885621]
+[valid_psnr]: [30.410231]
+
+2022-08-25 09:18:01,408 
+===============================
+  [BaseLogger] [014/100]
+===============================
+[registration_loss]: [-0.744605]
+[reconstruction_loss]: [0.972869]
+[train_ssim]: [0.785231]
+[train_psnr]: [30.937537]
+[valid_ssim]: [0.884672]
+[valid_psnr]: [31.278614]
+
+2022-08-25 09:18:02,371 
+===============================
+  [ModelCheckpoint] [014/100]
+===============================
+[valid_psnr] Improved: [31.13526] -> [31.27861] 
+[valid_ssim] Maintained: Current is [0.88467] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:18:02,462 
+===============================
+  [ModelCheckpoint] [014/100]
+===============================
+[valid_psnr] Improved: [31.13526] -> [31.27861] 
+[valid_ssim] Maintained: Current is [0.88467] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:18:02,463 
+===============================
+  [BaseLogger] [014/100]
+===============================
+[registration_loss]: [-0.744605]
+[reconstruction_loss]: [0.972869]
+[train_ssim]: [0.785231]
+[train_psnr]: [30.937537]
+[valid_ssim]: [0.884672]
+[valid_psnr]: [31.278614]
+
+2022-08-25 09:28:51,891 
+===============================
+  [BaseLogger] [015/100]
+===============================
+[registration_loss]: [-0.745586]
+[reconstruction_loss]: [0.959881]
+[train_ssim]: [0.805620]
+[train_psnr]: [31.031688]
+[valid_ssim]: [0.700911]
+[valid_psnr]: [30.735919]
+
+2022-08-25 09:28:52,836 
+===============================
+  [ModelCheckpoint] [015/100]
+===============================
+[valid_psnr] Maintained: Current is [30.73592] Best is [31.27861] in Epoch [00014] 
+[valid_ssim] Maintained: Current is [0.70091] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:28:52,878 
+===============================
+  [ModelCheckpoint] [015/100]
+===============================
+[valid_psnr] Maintained: Current is [30.73592] Best is [31.27861] in Epoch [00014] 
+[valid_ssim] Maintained: Current is [0.70091] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:28:52,879 
+===============================
+  [BaseLogger] [015/100]
+===============================
+[registration_loss]: [-0.745586]
+[reconstruction_loss]: [0.959881]
+[train_ssim]: [0.805620]
+[train_psnr]: [31.031688]
+[valid_ssim]: [0.700911]
+[valid_psnr]: [30.735919]
+
+2022-08-25 09:36:46,681 
+===============================
+  [BaseLogger] [016/100]
+===============================
+[registration_loss]: [-0.749262]
+[reconstruction_loss]: [0.944100]
+[train_ssim]: [0.813952]
+[train_psnr]: [31.138289]
+[valid_ssim]: [0.802487]
+[valid_psnr]: [31.068295]
+
+2022-08-25 09:36:47,589 
+===============================
+  [ModelCheckpoint] [016/100]
+===============================
+[valid_psnr] Maintained: Current is [31.06830] Best is [31.27861] in Epoch [00014] 
+[valid_ssim] Maintained: Current is [0.80249] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:36:47,630 
+===============================
+  [ModelCheckpoint] [016/100]
+===============================
+[valid_psnr] Maintained: Current is [31.06830] Best is [31.27861] in Epoch [00014] 
+[valid_ssim] Maintained: Current is [0.80249] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:36:47,631 
+===============================
+  [BaseLogger] [016/100]
+===============================
+[registration_loss]: [-0.749262]
+[reconstruction_loss]: [0.944100]
+[train_ssim]: [0.813952]
+[train_psnr]: [31.138289]
+[valid_ssim]: [0.802487]
+[valid_psnr]: [31.068295]
+
+2022-08-25 09:44:30,052 
+===============================
+  [BaseLogger] [017/100]
+===============================
+[registration_loss]: [-0.751740]
+[reconstruction_loss]: [0.942874]
+[train_ssim]: [0.803942]
+[train_psnr]: [31.134672]
+[valid_ssim]: [0.865782]
+[valid_psnr]: [31.058845]
+
+2022-08-25 09:44:30,896 
+===============================
+  [ModelCheckpoint] [017/100]
+===============================
+[valid_psnr] Maintained: Current is [31.05885] Best is [31.27861] in Epoch [00014] 
+[valid_ssim] Maintained: Current is [0.86578] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:44:30,936 
+===============================
+  [ModelCheckpoint] [017/100]
+===============================
+[valid_psnr] Maintained: Current is [31.05885] Best is [31.27861] in Epoch [00014] 
+[valid_ssim] Maintained: Current is [0.86578] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:44:30,938 
+===============================
+  [BaseLogger] [017/100]
+===============================
+[registration_loss]: [-0.751740]
+[reconstruction_loss]: [0.942874]
+[train_ssim]: [0.803942]
+[train_psnr]: [31.134672]
+[valid_ssim]: [0.865782]
+[valid_psnr]: [31.058845]
+
+2022-08-25 09:52:23,609 
+===============================
+  [BaseLogger] [018/100]
+===============================
+[registration_loss]: [-0.756631]
+[reconstruction_loss]: [0.911447]
+[train_ssim]: [0.817529]
+[train_psnr]: [31.246231]
+[valid_ssim]: [0.831669]
+[valid_psnr]: [31.525084]
+
+2022-08-25 09:52:24,448 
+===============================
+  [ModelCheckpoint] [018/100]
+===============================
+[valid_psnr] Improved: [31.27861] -> [31.52508] 
+[valid_ssim] Maintained: Current is [0.83167] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:52:24,534 
+===============================
+  [ModelCheckpoint] [018/100]
+===============================
+[valid_psnr] Improved: [31.27861] -> [31.52508] 
+[valid_ssim] Maintained: Current is [0.83167] Best is [0.88562] in Epoch [00013] 
+
+2022-08-25 09:52:24,535 
+===============================
+  [BaseLogger] [018/100]
+===============================
+[registration_loss]: [-0.756631]
+[reconstruction_loss]: [0.911447]
+[train_ssim]: [0.817529]
+[train_psnr]: [31.246231]
+[valid_ssim]: [0.831669]
+[valid_psnr]: [31.525084]
+
+2022-08-25 10:00:19,814 
+===============================
+  [BaseLogger] [019/100]
+===============================
+[registration_loss]: [-0.756263]
+[reconstruction_loss]: [0.922118]
+[train_ssim]: [0.830661]
+[train_psnr]: [31.282431]
+[valid_ssim]: [0.898827]
+[valid_psnr]: [30.957296]
+
+2022-08-25 10:00:20,663 
+===============================
+  [ModelCheckpoint] [019/100]
+===============================
+[valid_psnr] Maintained: Current is [30.95730] Best is [31.52508] in Epoch [00018] 
+[valid_ssim] Improved: [0.88562] -> [0.89883] 
+
+2022-08-25 10:00:20,745 
+===============================
+  [ModelCheckpoint] [019/100]
+===============================
+[valid_psnr] Maintained: Current is [30.95730] Best is [31.52508] in Epoch [00018] 
+[valid_ssim] Improved: [0.88562] -> [0.89883] 
+
+2022-08-25 10:00:20,746 
+===============================
+  [BaseLogger] [019/100]
+===============================
+[registration_loss]: [-0.756263]
+[reconstruction_loss]: [0.922118]
+[train_ssim]: [0.830661]
+[train_psnr]: [31.282431]
+[valid_ssim]: [0.898827]
+[valid_psnr]: [30.957296]
+
+2022-08-25 10:08:11,500 
+===============================
+  [BaseLogger] [020/100]
+===============================
+[registration_loss]: [-0.759979]
+[reconstruction_loss]: [0.903116]
+[train_ssim]: [0.829247]
+[train_psnr]: [31.419492]
+[valid_ssim]: [0.902549]
+[valid_psnr]: [31.329637]
+
+2022-08-25 10:08:12,415 
+===============================
+  [ModelCheckpoint] [020/100]
+===============================
+[valid_psnr] Maintained: Current is [31.32964] Best is [31.52508] in Epoch [00018] 
+[valid_ssim] Improved: [0.89883] -> [0.90255] 
+
+2022-08-25 10:08:12,543 
+===============================
+  [ModelCheckpoint] [020/100]
+===============================
+[valid_psnr] Maintained: Current is [31.32964] Best is [31.52508] in Epoch [00018] 
+[valid_ssim] Improved: [0.89883] -> [0.90255] 
+
+2022-08-25 10:08:12,544 
+===============================
+  [BaseLogger] [020/100]
+===============================
+[registration_loss]: [-0.759979]
+[reconstruction_loss]: [0.903116]
+[train_ssim]: [0.829247]
+[train_psnr]: [31.419492]
+[valid_ssim]: [0.902549]
+[valid_psnr]: [31.329637]
+
+2022-08-25 10:15:58,793 
+===============================
+  [BaseLogger] [021/100]
+===============================
+[registration_loss]: [-0.761887]
+[reconstruction_loss]: [0.893769]
+[train_ssim]: [0.827846]
+[train_psnr]: [31.484600]
+[valid_ssim]: [0.767170]
+[valid_psnr]: [31.071337]
+
+2022-08-25 10:15:59,637 
+===============================
+  [ModelCheckpoint] [021/100]
+===============================
+[valid_psnr] Maintained: Current is [31.07134] Best is [31.52508] in Epoch [00018] 
+[valid_ssim] Maintained: Current is [0.76717] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:15:59,678 
+===============================
+  [ModelCheckpoint] [021/100]
+===============================
+[valid_psnr] Maintained: Current is [31.07134] Best is [31.52508] in Epoch [00018] 
+[valid_ssim] Maintained: Current is [0.76717] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:15:59,679 
+===============================
+  [BaseLogger] [021/100]
+===============================
+[registration_loss]: [-0.761887]
+[reconstruction_loss]: [0.893769]
+[train_ssim]: [0.827846]
+[train_psnr]: [31.484600]
+[valid_ssim]: [0.767170]
+[valid_psnr]: [31.071337]
+
+2022-08-25 10:23:40,615 
+===============================
+  [BaseLogger] [022/100]
+===============================
+[registration_loss]: [-0.766694]
+[reconstruction_loss]: [0.886449]
+[train_ssim]: [0.818905]
+[train_psnr]: [31.520018]
+[valid_ssim]: [0.770576]
+[valid_psnr]: [31.634914]
+
+2022-08-25 10:23:41,462 
+===============================
+  [ModelCheckpoint] [022/100]
+===============================
+[valid_psnr] Improved: [31.52508] -> [31.63491] 
+[valid_ssim] Maintained: Current is [0.77058] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:23:41,543 
+===============================
+  [ModelCheckpoint] [022/100]
+===============================
+[valid_psnr] Improved: [31.52508] -> [31.63491] 
+[valid_ssim] Maintained: Current is [0.77058] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:23:41,544 
+===============================
+  [BaseLogger] [022/100]
+===============================
+[registration_loss]: [-0.766694]
+[reconstruction_loss]: [0.886449]
+[train_ssim]: [0.818905]
+[train_psnr]: [31.520018]
+[valid_ssim]: [0.770576]
+[valid_psnr]: [31.634914]
+
+2022-08-25 10:31:15,439 
+===============================
+  [BaseLogger] [023/100]
+===============================
+[registration_loss]: [-0.768443]
+[reconstruction_loss]: [0.873193]
+[train_ssim]: [0.831929]
+[train_psnr]: [31.536114]
+[valid_ssim]: [0.835499]
+[valid_psnr]: [31.401439]
+
+2022-08-25 10:31:16,279 
+===============================
+  [ModelCheckpoint] [023/100]
+===============================
+[valid_psnr] Maintained: Current is [31.40144] Best is [31.63491] in Epoch [00022] 
+[valid_ssim] Maintained: Current is [0.83550] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:31:16,321 
+===============================
+  [ModelCheckpoint] [023/100]
+===============================
+[valid_psnr] Maintained: Current is [31.40144] Best is [31.63491] in Epoch [00022] 
+[valid_ssim] Maintained: Current is [0.83550] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:31:16,322 
+===============================
+  [BaseLogger] [023/100]
+===============================
+[registration_loss]: [-0.768443]
+[reconstruction_loss]: [0.873193]
+[train_ssim]: [0.831929]
+[train_psnr]: [31.536114]
+[valid_ssim]: [0.835499]
+[valid_psnr]: [31.401439]
+
+2022-08-25 10:38:59,062 
+===============================
+  [BaseLogger] [024/100]
+===============================
+[registration_loss]: [-0.770159]
+[reconstruction_loss]: [0.860847]
+[train_ssim]: [0.835289]
+[train_psnr]: [31.636276]
+[valid_ssim]: [0.885753]
+[valid_psnr]: [31.458453]
+
+2022-08-25 10:38:59,904 
+===============================
+  [ModelCheckpoint] [024/100]
+===============================
+[valid_psnr] Maintained: Current is [31.45845] Best is [31.63491] in Epoch [00022] 
+[valid_ssim] Maintained: Current is [0.88575] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:38:59,945 
+===============================
+  [ModelCheckpoint] [024/100]
+===============================
+[valid_psnr] Maintained: Current is [31.45845] Best is [31.63491] in Epoch [00022] 
+[valid_ssim] Maintained: Current is [0.88575] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:38:59,945 
+===============================
+  [BaseLogger] [024/100]
+===============================
+[registration_loss]: [-0.770159]
+[reconstruction_loss]: [0.860847]
+[train_ssim]: [0.835289]
+[train_psnr]: [31.636276]
+[valid_ssim]: [0.885753]
+[valid_psnr]: [31.458453]
+
+2022-08-25 10:46:33,979 
+===============================
+  [BaseLogger] [025/100]
+===============================
+[registration_loss]: [-0.772673]
+[reconstruction_loss]: [0.855855]
+[train_ssim]: [0.825759]
+[train_psnr]: [31.690806]
+[valid_ssim]: [0.895548]
+[valid_psnr]: [31.086055]
+
+2022-08-25 10:46:34,819 
+===============================
+  [ModelCheckpoint] [025/100]
+===============================
+[valid_psnr] Maintained: Current is [31.08606] Best is [31.63491] in Epoch [00022] 
+[valid_ssim] Maintained: Current is [0.89555] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:46:34,862 
+===============================
+  [ModelCheckpoint] [025/100]
+===============================
+[valid_psnr] Maintained: Current is [31.08606] Best is [31.63491] in Epoch [00022] 
+[valid_ssim] Maintained: Current is [0.89555] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:46:34,863 
+===============================
+  [BaseLogger] [025/100]
+===============================
+[registration_loss]: [-0.772673]
+[reconstruction_loss]: [0.855855]
+[train_ssim]: [0.825759]
+[train_psnr]: [31.690806]
+[valid_ssim]: [0.895548]
+[valid_psnr]: [31.086055]
+
+2022-08-25 10:54:03,302 
+===============================
+  [BaseLogger] [026/100]
+===============================
+[registration_loss]: [-0.774383]
+[reconstruction_loss]: [0.845558]
+[train_ssim]: [0.844383]
+[train_psnr]: [31.834115]
+[valid_ssim]: [0.879923]
+[valid_psnr]: [31.825016]
+
+2022-08-25 10:54:04,146 
+===============================
+  [ModelCheckpoint] [026/100]
+===============================
+[valid_psnr] Improved: [31.63491] -> [31.82502] 
+[valid_ssim] Maintained: Current is [0.87992] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:54:04,226 
+===============================
+  [ModelCheckpoint] [026/100]
+===============================
+[valid_psnr] Improved: [31.63491] -> [31.82502] 
+[valid_ssim] Maintained: Current is [0.87992] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 10:54:04,226 
+===============================
+  [BaseLogger] [026/100]
+===============================
+[registration_loss]: [-0.774383]
+[reconstruction_loss]: [0.845558]
+[train_ssim]: [0.844383]
+[train_psnr]: [31.834115]
+[valid_ssim]: [0.879923]
+[valid_psnr]: [31.825016]
+
+2022-08-25 11:01:32,517 
+===============================
+  [BaseLogger] [027/100]
+===============================
+[registration_loss]: [-0.776973]
+[reconstruction_loss]: [0.838843]
+[train_ssim]: [0.837196]
+[train_psnr]: [31.760009]
+[valid_ssim]: [0.805826]
+[valid_psnr]: [31.730921]
+
+2022-08-25 11:01:33,354 
+===============================
+  [ModelCheckpoint] [027/100]
+===============================
+[valid_psnr] Maintained: Current is [31.73092] Best is [31.82502] in Epoch [00026] 
+[valid_ssim] Maintained: Current is [0.80583] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:01:33,395 
+===============================
+  [ModelCheckpoint] [027/100]
+===============================
+[valid_psnr] Maintained: Current is [31.73092] Best is [31.82502] in Epoch [00026] 
+[valid_ssim] Maintained: Current is [0.80583] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:01:33,396 
+===============================
+  [BaseLogger] [027/100]
+===============================
+[registration_loss]: [-0.776973]
+[reconstruction_loss]: [0.838843]
+[train_ssim]: [0.837196]
+[train_psnr]: [31.760009]
+[valid_ssim]: [0.805826]
+[valid_psnr]: [31.730921]
+
+2022-08-25 11:09:01,710 
+===============================
+  [BaseLogger] [028/100]
+===============================
+[registration_loss]: [-0.777141]
+[reconstruction_loss]: [0.837346]
+[train_ssim]: [0.840537]
+[train_psnr]: [31.757680]
+[valid_ssim]: [0.855933]
+[valid_psnr]: [31.707972]
+
+2022-08-25 11:09:02,544 
+===============================
+  [ModelCheckpoint] [028/100]
+===============================
+[valid_psnr] Maintained: Current is [31.70797] Best is [31.82502] in Epoch [00026] 
+[valid_ssim] Maintained: Current is [0.85593] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:09:02,586 
+===============================
+  [ModelCheckpoint] [028/100]
+===============================
+[valid_psnr] Maintained: Current is [31.70797] Best is [31.82502] in Epoch [00026] 
+[valid_ssim] Maintained: Current is [0.85593] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:09:02,587 
+===============================
+  [BaseLogger] [028/100]
+===============================
+[registration_loss]: [-0.777141]
+[reconstruction_loss]: [0.837346]
+[train_ssim]: [0.840537]
+[train_psnr]: [31.757680]
+[valid_ssim]: [0.855933]
+[valid_psnr]: [31.707972]
+
+2022-08-25 11:16:30,858 
+===============================
+  [BaseLogger] [029/100]
+===============================
+[registration_loss]: [-0.778153]
+[reconstruction_loss]: [0.843901]
+[train_ssim]: [0.823517]
+[train_psnr]: [31.709237]
+[valid_ssim]: [0.861063]
+[valid_psnr]: [31.456015]
+
+2022-08-25 11:16:31,697 
+===============================
+  [ModelCheckpoint] [029/100]
+===============================
+[valid_psnr] Maintained: Current is [31.45601] Best is [31.82502] in Epoch [00026] 
+[valid_ssim] Maintained: Current is [0.86106] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:16:31,739 
+===============================
+  [ModelCheckpoint] [029/100]
+===============================
+[valid_psnr] Maintained: Current is [31.45601] Best is [31.82502] in Epoch [00026] 
+[valid_ssim] Maintained: Current is [0.86106] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:16:31,740 
+===============================
+  [BaseLogger] [029/100]
+===============================
+[registration_loss]: [-0.778153]
+[reconstruction_loss]: [0.843901]
+[train_ssim]: [0.823517]
+[train_psnr]: [31.709237]
+[valid_ssim]: [0.861063]
+[valid_psnr]: [31.456015]
+
+2022-08-25 11:23:59,876 
+===============================
+  [BaseLogger] [030/100]
+===============================
+[registration_loss]: [-0.779176]
+[reconstruction_loss]: [0.827236]
+[train_ssim]: [0.847031]
+[train_psnr]: [31.850205]
+[valid_ssim]: [0.897651]
+[valid_psnr]: [32.024153]
+
+2022-08-25 11:24:00,728 
+===============================
+  [ModelCheckpoint] [030/100]
+===============================
+[valid_psnr] Improved: [31.82502] -> [32.02415] 
+[valid_ssim] Maintained: Current is [0.89765] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:24:00,844 
+===============================
+  [ModelCheckpoint] [030/100]
+===============================
+[valid_psnr] Improved: [31.82502] -> [32.02415] 
+[valid_ssim] Maintained: Current is [0.89765] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:24:00,845 
+===============================
+  [BaseLogger] [030/100]
+===============================
+[registration_loss]: [-0.779176]
+[reconstruction_loss]: [0.827236]
+[train_ssim]: [0.847031]
+[train_psnr]: [31.850205]
+[valid_ssim]: [0.897651]
+[valid_psnr]: [32.024153]
+
+2022-08-25 11:31:28,708 
+===============================
+  [BaseLogger] [031/100]
+===============================
+[registration_loss]: [-0.781559]
+[reconstruction_loss]: [0.814129]
+[train_ssim]: [0.850622]
+[train_psnr]: [31.894506]
+[valid_ssim]: [0.769623]
+[valid_psnr]: [31.536627]
+
+2022-08-25 11:31:29,544 
+===============================
+  [ModelCheckpoint] [031/100]
+===============================
+[valid_psnr] Maintained: Current is [31.53663] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.76962] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:31:29,585 
+===============================
+  [ModelCheckpoint] [031/100]
+===============================
+[valid_psnr] Maintained: Current is [31.53663] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.76962] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:31:29,586 
+===============================
+  [BaseLogger] [031/100]
+===============================
+[registration_loss]: [-0.781559]
+[reconstruction_loss]: [0.814129]
+[train_ssim]: [0.850622]
+[train_psnr]: [31.894506]
+[valid_ssim]: [0.769623]
+[valid_psnr]: [31.536627]
+
+2022-08-25 11:38:57,386 
+===============================
+  [BaseLogger] [032/100]
+===============================
+[registration_loss]: [-0.783877]
+[reconstruction_loss]: [0.799260]
+[train_ssim]: [0.846834]
+[train_psnr]: [32.008623]
+[valid_ssim]: [0.703383]
+[valid_psnr]: [30.683067]
+
+2022-08-25 11:38:58,228 
+===============================
+  [ModelCheckpoint] [032/100]
+===============================
+[valid_psnr] Maintained: Current is [30.68307] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.70338] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:38:58,269 
+===============================
+  [ModelCheckpoint] [032/100]
+===============================
+[valid_psnr] Maintained: Current is [30.68307] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.70338] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:38:58,270 
+===============================
+  [BaseLogger] [032/100]
+===============================
+[registration_loss]: [-0.783877]
+[reconstruction_loss]: [0.799260]
+[train_ssim]: [0.846834]
+[train_psnr]: [32.008623]
+[valid_ssim]: [0.703383]
+[valid_psnr]: [30.683067]
+
+2022-08-25 11:46:26,048 
+===============================
+  [BaseLogger] [033/100]
+===============================
+[registration_loss]: [-0.785547]
+[reconstruction_loss]: [0.807015]
+[train_ssim]: [0.839756]
+[train_psnr]: [31.888519]
+[valid_ssim]: [0.855010]
+[valid_psnr]: [31.760767]
+
+2022-08-25 11:46:26,887 
+===============================
+  [ModelCheckpoint] [033/100]
+===============================
+[valid_psnr] Maintained: Current is [31.76077] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.85501] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:46:26,928 
+===============================
+  [ModelCheckpoint] [033/100]
+===============================
+[valid_psnr] Maintained: Current is [31.76077] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.85501] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:46:26,929 
+===============================
+  [BaseLogger] [033/100]
+===============================
+[registration_loss]: [-0.785547]
+[reconstruction_loss]: [0.807015]
+[train_ssim]: [0.839756]
+[train_psnr]: [31.888519]
+[valid_ssim]: [0.855010]
+[valid_psnr]: [31.760767]
+
+2022-08-25 11:53:54,673 
+===============================
+  [BaseLogger] [034/100]
+===============================
+[registration_loss]: [-0.786816]
+[reconstruction_loss]: [0.800176]
+[train_ssim]: [0.836834]
+[train_psnr]: [31.944081]
+[valid_ssim]: [0.865912]
+[valid_psnr]: [31.511851]
+
+2022-08-25 11:53:55,509 
+===============================
+  [ModelCheckpoint] [034/100]
+===============================
+[valid_psnr] Maintained: Current is [31.51185] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.86591] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:53:55,550 
+===============================
+  [ModelCheckpoint] [034/100]
+===============================
+[valid_psnr] Maintained: Current is [31.51185] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.86591] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 11:53:55,551 
+===============================
+  [BaseLogger] [034/100]
+===============================
+[registration_loss]: [-0.786816]
+[reconstruction_loss]: [0.800176]
+[train_ssim]: [0.836834]
+[train_psnr]: [31.944081]
+[valid_ssim]: [0.865912]
+[valid_psnr]: [31.511851]
+
+2022-08-25 12:01:23,187 
+===============================
+  [BaseLogger] [035/100]
+===============================
+[registration_loss]: [-0.786841]
+[reconstruction_loss]: [0.789484]
+[train_ssim]: [0.845084]
+[train_psnr]: [31.985179]
+[valid_ssim]: [0.796334]
+[valid_psnr]: [31.756643]
+
+2022-08-25 12:01:24,029 
+===============================
+  [ModelCheckpoint] [035/100]
+===============================
+[valid_psnr] Maintained: Current is [31.75664] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.79633] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:01:24,070 
+===============================
+  [ModelCheckpoint] [035/100]
+===============================
+[valid_psnr] Maintained: Current is [31.75664] Best is [32.02415] in Epoch [00030] 
+[valid_ssim] Maintained: Current is [0.79633] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:01:24,070 
+===============================
+  [BaseLogger] [035/100]
+===============================
+[registration_loss]: [-0.786841]
+[reconstruction_loss]: [0.789484]
+[train_ssim]: [0.845084]
+[train_psnr]: [31.985179]
+[valid_ssim]: [0.796334]
+[valid_psnr]: [31.756643]
+
+2022-08-25 12:08:51,844 
+===============================
+  [BaseLogger] [036/100]
+===============================
+[registration_loss]: [-0.799390]
+[reconstruction_loss]: [0.805419]
+[train_ssim]: [0.832323]
+[train_psnr]: [31.889451]
+[valid_ssim]: [0.819305]
+[valid_psnr]: [32.102712]
+
+2022-08-25 12:08:52,689 
+===============================
+  [ModelCheckpoint] [036/100]
+===============================
+[valid_psnr] Improved: [32.02415] -> [32.10271] 
+[valid_ssim] Maintained: Current is [0.81931] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:08:52,769 
+===============================
+  [ModelCheckpoint] [036/100]
+===============================
+[valid_psnr] Improved: [32.02415] -> [32.10271] 
+[valid_ssim] Maintained: Current is [0.81931] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:08:52,770 
+===============================
+  [BaseLogger] [036/100]
+===============================
+[registration_loss]: [-0.799390]
+[reconstruction_loss]: [0.805419]
+[train_ssim]: [0.832323]
+[train_psnr]: [31.889451]
+[valid_ssim]: [0.819305]
+[valid_psnr]: [32.102712]
+
+2022-08-25 12:16:20,452 
+===============================
+  [BaseLogger] [037/100]
+===============================
+[registration_loss]: [-0.809388]
+[reconstruction_loss]: [0.790183]
+[train_ssim]: [0.818410]
+[train_psnr]: [31.961509]
+[valid_ssim]: [0.890494]
+[valid_psnr]: [31.848893]
+
+2022-08-25 12:16:21,290 
+===============================
+  [ModelCheckpoint] [037/100]
+===============================
+[valid_psnr] Maintained: Current is [31.84889] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.89049] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:16:21,330 
+===============================
+  [ModelCheckpoint] [037/100]
+===============================
+[valid_psnr] Maintained: Current is [31.84889] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.89049] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:16:21,331 
+===============================
+  [BaseLogger] [037/100]
+===============================
+[registration_loss]: [-0.809388]
+[reconstruction_loss]: [0.790183]
+[train_ssim]: [0.818410]
+[train_psnr]: [31.961509]
+[valid_ssim]: [0.890494]
+[valid_psnr]: [31.848893]
+
+2022-08-25 12:23:48,912 
+===============================
+  [BaseLogger] [038/100]
+===============================
+[registration_loss]: [-0.804825]
+[reconstruction_loss]: [0.784419]
+[train_ssim]: [0.815998]
+[train_psnr]: [31.957368]
+[valid_ssim]: [0.863032]
+[valid_psnr]: [31.533693]
+
+2022-08-25 12:23:49,755 
+===============================
+  [ModelCheckpoint] [038/100]
+===============================
+[valid_psnr] Maintained: Current is [31.53369] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.86303] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:23:49,798 
+===============================
+  [ModelCheckpoint] [038/100]
+===============================
+[valid_psnr] Maintained: Current is [31.53369] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.86303] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:23:49,799 
+===============================
+  [BaseLogger] [038/100]
+===============================
+[registration_loss]: [-0.804825]
+[reconstruction_loss]: [0.784419]
+[train_ssim]: [0.815998]
+[train_psnr]: [31.957368]
+[valid_ssim]: [0.863032]
+[valid_psnr]: [31.533693]
+
+2022-08-25 12:31:17,356 
+===============================
+  [BaseLogger] [039/100]
+===============================
+[registration_loss]: [-0.799307]
+[reconstruction_loss]: [0.790785]
+[train_ssim]: [0.823788]
+[train_psnr]: [31.986584]
+[valid_ssim]: [0.690863]
+[valid_psnr]: [31.355810]
+
+2022-08-25 12:31:18,198 
+===============================
+  [ModelCheckpoint] [039/100]
+===============================
+[valid_psnr] Maintained: Current is [31.35581] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.69086] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:31:18,238 
+===============================
+  [ModelCheckpoint] [039/100]
+===============================
+[valid_psnr] Maintained: Current is [31.35581] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.69086] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:31:18,239 
+===============================
+  [BaseLogger] [039/100]
+===============================
+[registration_loss]: [-0.799307]
+[reconstruction_loss]: [0.790785]
+[train_ssim]: [0.823788]
+[train_psnr]: [31.986584]
+[valid_ssim]: [0.690863]
+[valid_psnr]: [31.355810]
+
+2022-08-25 12:38:45,818 
+===============================
+  [BaseLogger] [040/100]
+===============================
+[registration_loss]: [-0.801881]
+[reconstruction_loss]: [0.782043]
+[train_ssim]: [0.808449]
+[train_psnr]: [31.963424]
+[valid_ssim]: [0.784930]
+[valid_psnr]: [31.481764]
+
+2022-08-25 12:38:46,659 
+===============================
+  [ModelCheckpoint] [040/100]
+===============================
+[valid_psnr] Maintained: Current is [31.48176] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.78493] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:38:46,737 
+===============================
+  [ModelCheckpoint] [040/100]
+===============================
+[valid_psnr] Maintained: Current is [31.48176] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.78493] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:38:46,738 
+===============================
+  [BaseLogger] [040/100]
+===============================
+[registration_loss]: [-0.801881]
+[reconstruction_loss]: [0.782043]
+[train_ssim]: [0.808449]
+[train_psnr]: [31.963424]
+[valid_ssim]: [0.784930]
+[valid_psnr]: [31.481764]
+
+2022-08-25 12:46:14,287 
+===============================
+  [BaseLogger] [041/100]
+===============================
+[registration_loss]: [-0.801725]
+[reconstruction_loss]: [0.775097]
+[train_ssim]: [0.817333]
+[train_psnr]: [32.061188]
+[valid_ssim]: [0.832708]
+[valid_psnr]: [31.625081]
+
+2022-08-25 12:46:15,124 
+===============================
+  [ModelCheckpoint] [041/100]
+===============================
+[valid_psnr] Maintained: Current is [31.62508] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.83271] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:46:15,165 
+===============================
+  [ModelCheckpoint] [041/100]
+===============================
+[valid_psnr] Maintained: Current is [31.62508] Best is [32.10271] in Epoch [00036] 
+[valid_ssim] Maintained: Current is [0.83271] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:46:15,166 
+===============================
+  [BaseLogger] [041/100]
+===============================
+[registration_loss]: [-0.801725]
+[reconstruction_loss]: [0.775097]
+[train_ssim]: [0.817333]
+[train_psnr]: [32.061188]
+[valid_ssim]: [0.832708]
+[valid_psnr]: [31.625081]
+
+2022-08-25 12:53:42,621 
+===============================
+  [BaseLogger] [042/100]
+===============================
+[registration_loss]: [-0.806609]
+[reconstruction_loss]: [0.765965]
+[train_ssim]: [0.794072]
+[train_psnr]: [32.025639]
+[valid_ssim]: [0.787544]
+[valid_psnr]: [32.200121]
+
+2022-08-25 12:53:43,465 
+===============================
+  [ModelCheckpoint] [042/100]
+===============================
+[valid_psnr] Improved: [32.10271] -> [32.20012] 
+[valid_ssim] Maintained: Current is [0.78754] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:53:43,544 
+===============================
+  [ModelCheckpoint] [042/100]
+===============================
+[valid_psnr] Improved: [32.10271] -> [32.20012] 
+[valid_ssim] Maintained: Current is [0.78754] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 12:53:43,545 
+===============================
+  [BaseLogger] [042/100]
+===============================
+[registration_loss]: [-0.806609]
+[reconstruction_loss]: [0.765965]
+[train_ssim]: [0.794072]
+[train_psnr]: [32.025639]
+[valid_ssim]: [0.787544]
+[valid_psnr]: [32.200121]
+
+2022-08-25 13:01:17,683 
+===============================
+  [BaseLogger] [043/100]
+===============================
+[registration_loss]: [-0.812429]
+[reconstruction_loss]: [0.758929]
+[train_ssim]: [0.758227]
+[train_psnr]: [31.919419]
+[valid_ssim]: [0.693214]
+[valid_psnr]: [31.292161]
+
+2022-08-25 13:01:18,523 
+===============================
+  [ModelCheckpoint] [043/100]
+===============================
+[valid_psnr] Maintained: Current is [31.29216] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.69321] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:01:18,563 
+===============================
+  [ModelCheckpoint] [043/100]
+===============================
+[valid_psnr] Maintained: Current is [31.29216] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.69321] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:01:18,564 
+===============================
+  [BaseLogger] [043/100]
+===============================
+[registration_loss]: [-0.812429]
+[reconstruction_loss]: [0.758929]
+[train_ssim]: [0.758227]
+[train_psnr]: [31.919419]
+[valid_ssim]: [0.693214]
+[valid_psnr]: [31.292161]
+
+2022-08-25 13:08:54,366 
+===============================
+  [BaseLogger] [044/100]
+===============================
+[registration_loss]: [-0.814196]
+[reconstruction_loss]: [0.771914]
+[train_ssim]: [0.749311]
+[train_psnr]: [31.788223]
+[valid_ssim]: [0.575753]
+[valid_psnr]: [30.588709]
+
+2022-08-25 13:08:55,211 
+===============================
+  [ModelCheckpoint] [044/100]
+===============================
+[valid_psnr] Maintained: Current is [30.58871] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.57575] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:08:55,252 
+===============================
+  [ModelCheckpoint] [044/100]
+===============================
+[valid_psnr] Maintained: Current is [30.58871] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.57575] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:08:55,253 
+===============================
+  [BaseLogger] [044/100]
+===============================
+[registration_loss]: [-0.814196]
+[reconstruction_loss]: [0.771914]
+[train_ssim]: [0.749311]
+[train_psnr]: [31.788223]
+[valid_ssim]: [0.575753]
+[valid_psnr]: [30.588709]
+
+2022-08-25 13:16:26,508 
+===============================
+  [BaseLogger] [045/100]
+===============================
+[registration_loss]: [-0.838454]
+[reconstruction_loss]: [0.756367]
+[train_ssim]: [0.706936]
+[train_psnr]: [31.575777]
+[valid_ssim]: [0.815140]
+[valid_psnr]: [31.942438]
+
+2022-08-25 13:16:27,350 
+===============================
+  [ModelCheckpoint] [045/100]
+===============================
+[valid_psnr] Maintained: Current is [31.94244] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.81514] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:16:27,390 
+===============================
+  [ModelCheckpoint] [045/100]
+===============================
+[valid_psnr] Maintained: Current is [31.94244] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.81514] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:16:27,391 
+===============================
+  [BaseLogger] [045/100]
+===============================
+[registration_loss]: [-0.838454]
+[reconstruction_loss]: [0.756367]
+[train_ssim]: [0.706936]
+[train_psnr]: [31.575777]
+[valid_ssim]: [0.815140]
+[valid_psnr]: [31.942438]
+
+2022-08-25 13:24:44,943 
+===============================
+  [BaseLogger] [046/100]
+===============================
+[registration_loss]: [-0.820912]
+[reconstruction_loss]: [0.764661]
+[train_ssim]: [0.761086]
+[train_psnr]: [31.699685]
+[valid_ssim]: [0.895450]
+[valid_psnr]: [32.080940]
+
+2022-08-25 13:24:45,848 
+===============================
+  [ModelCheckpoint] [046/100]
+===============================
+[valid_psnr] Maintained: Current is [32.08094] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.89545] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:24:45,889 
+===============================
+  [ModelCheckpoint] [046/100]
+===============================
+[valid_psnr] Maintained: Current is [32.08094] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.89545] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:24:45,890 
+===============================
+  [BaseLogger] [046/100]
+===============================
+[registration_loss]: [-0.820912]
+[reconstruction_loss]: [0.764661]
+[train_ssim]: [0.761086]
+[train_psnr]: [31.699685]
+[valid_ssim]: [0.895450]
+[valid_psnr]: [32.080940]
+
+2022-08-25 13:32:56,716 
+===============================
+  [BaseLogger] [047/100]
+===============================
+[registration_loss]: [-0.837702]
+[reconstruction_loss]: [0.756188]
+[train_ssim]: [0.730010]
+[train_psnr]: [31.616240]
+[valid_ssim]: [0.852973]
+[valid_psnr]: [31.724153]
+
+2022-08-25 13:32:57,689 
+===============================
+  [ModelCheckpoint] [047/100]
+===============================
+[valid_psnr] Maintained: Current is [31.72415] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.85297] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:32:57,734 
+===============================
+  [ModelCheckpoint] [047/100]
+===============================
+[valid_psnr] Maintained: Current is [31.72415] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.85297] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:32:57,736 
+===============================
+  [BaseLogger] [047/100]
+===============================
+[registration_loss]: [-0.837702]
+[reconstruction_loss]: [0.756188]
+[train_ssim]: [0.730010]
+[train_psnr]: [31.616240]
+[valid_ssim]: [0.852973]
+[valid_psnr]: [31.724153]
+
+2022-08-25 13:44:10,946 
+===============================
+  [BaseLogger] [048/100]
+===============================
+[registration_loss]: [-0.845775]
+[reconstruction_loss]: [0.739877]
+[train_ssim]: [0.700145]
+[train_psnr]: [31.651889]
+[valid_ssim]: [0.711889]
+[valid_psnr]: [31.686501]
+
+2022-08-25 13:44:11,891 
+===============================
+  [ModelCheckpoint] [048/100]
+===============================
+[valid_psnr] Maintained: Current is [31.68650] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.71189] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:44:11,938 
+===============================
+  [ModelCheckpoint] [048/100]
+===============================
+[valid_psnr] Maintained: Current is [31.68650] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.71189] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:44:11,939 
+===============================
+  [BaseLogger] [048/100]
+===============================
+[registration_loss]: [-0.845775]
+[reconstruction_loss]: [0.739877]
+[train_ssim]: [0.700145]
+[train_psnr]: [31.651889]
+[valid_ssim]: [0.711889]
+[valid_psnr]: [31.686501]
+
+2022-08-25 13:52:20,144 
+===============================
+  [BaseLogger] [049/100]
+===============================
+[registration_loss]: [-0.890385]
+[reconstruction_loss]: [0.756722]
+[train_ssim]: [0.667695]
+[train_psnr]: [31.163649]
+[valid_ssim]: [0.628037]
+[valid_psnr]: [31.146705]
+
+2022-08-25 13:52:20,979 
+===============================
+  [ModelCheckpoint] [049/100]
+===============================
+[valid_psnr] Maintained: Current is [31.14670] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.62804] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:52:21,028 
+===============================
+  [ModelCheckpoint] [049/100]
+===============================
+[valid_psnr] Maintained: Current is [31.14670] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.62804] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:52:21,029 
+===============================
+  [BaseLogger] [049/100]
+===============================
+[registration_loss]: [-0.890385]
+[reconstruction_loss]: [0.756722]
+[train_ssim]: [0.667695]
+[train_psnr]: [31.163649]
+[valid_ssim]: [0.628037]
+[valid_psnr]: [31.146705]
+
+2022-08-25 13:59:45,580 
+===============================
+  [BaseLogger] [050/100]
+===============================
+[registration_loss]: [-0.939554]
+[reconstruction_loss]: [0.742198]
+[train_ssim]: [0.636500]
+[train_psnr]: [30.866239]
+[valid_ssim]: [0.584831]
+[valid_psnr]: [30.164070]
+
+2022-08-25 13:59:46,421 
+===============================
+  [ModelCheckpoint] [050/100]
+===============================
+[valid_psnr] Maintained: Current is [30.16407] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.58483] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:59:46,506 
+===============================
+  [ModelCheckpoint] [050/100]
+===============================
+[valid_psnr] Maintained: Current is [30.16407] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.58483] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 13:59:46,508 
+===============================
+  [BaseLogger] [050/100]
+===============================
+[registration_loss]: [-0.939554]
+[reconstruction_loss]: [0.742198]
+[train_ssim]: [0.636500]
+[train_psnr]: [30.866239]
+[valid_ssim]: [0.584831]
+[valid_psnr]: [30.164070]
+
+2022-08-25 14:07:10,899 
+===============================
+  [BaseLogger] [051/100]
+===============================
+[registration_loss]: [-0.953201]
+[reconstruction_loss]: [0.737698]
+[train_ssim]: [0.641112]
+[train_psnr]: [30.817017]
+[valid_ssim]: [0.551832]
+[valid_psnr]: [28.879900]
+
+2022-08-25 14:07:11,737 
+===============================
+  [ModelCheckpoint] [051/100]
+===============================
+[valid_psnr] Maintained: Current is [28.87990] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.55183] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:07:11,778 
+===============================
+  [ModelCheckpoint] [051/100]
+===============================
+[valid_psnr] Maintained: Current is [28.87990] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.55183] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:07:11,780 
+===============================
+  [BaseLogger] [051/100]
+===============================
+[registration_loss]: [-0.953201]
+[reconstruction_loss]: [0.737698]
+[train_ssim]: [0.641112]
+[train_psnr]: [30.817017]
+[valid_ssim]: [0.551832]
+[valid_psnr]: [28.879900]
+
+2022-08-25 14:14:35,849 
+===============================
+  [BaseLogger] [052/100]
+===============================
+[registration_loss]: [-0.976306]
+[reconstruction_loss]: [0.737198]
+[train_ssim]: [0.613921]
+[train_psnr]: [30.608499]
+[valid_ssim]: [0.573974]
+[valid_psnr]: [30.084973]
+
+2022-08-25 14:14:36,682 
+===============================
+  [ModelCheckpoint] [052/100]
+===============================
+[valid_psnr] Maintained: Current is [30.08497] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.57397] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:14:36,730 
+===============================
+  [ModelCheckpoint] [052/100]
+===============================
+[valid_psnr] Maintained: Current is [30.08497] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.57397] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:14:36,731 
+===============================
+  [BaseLogger] [052/100]
+===============================
+[registration_loss]: [-0.976306]
+[reconstruction_loss]: [0.737198]
+[train_ssim]: [0.613921]
+[train_psnr]: [30.608499]
+[valid_ssim]: [0.573974]
+[valid_psnr]: [30.084973]
+
+2022-08-25 14:22:00,572 
+===============================
+  [BaseLogger] [053/100]
+===============================
+[registration_loss]: [-1.004822]
+[reconstruction_loss]: [0.737206]
+[train_ssim]: [0.606973]
+[train_psnr]: [30.347736]
+[valid_ssim]: [0.547302]
+[valid_psnr]: [28.627212]
+
+2022-08-25 14:22:01,410 
+===============================
+  [ModelCheckpoint] [053/100]
+===============================
+[valid_psnr] Maintained: Current is [28.62721] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.54730] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:22:01,453 
+===============================
+  [ModelCheckpoint] [053/100]
+===============================
+[valid_psnr] Maintained: Current is [28.62721] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.54730] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:22:01,454 
+===============================
+  [BaseLogger] [053/100]
+===============================
+[registration_loss]: [-1.004822]
+[reconstruction_loss]: [0.737206]
+[train_ssim]: [0.606973]
+[train_psnr]: [30.347736]
+[valid_ssim]: [0.547302]
+[valid_psnr]: [28.627212]
+
+2022-08-25 14:29:29,938 
+===============================
+  [BaseLogger] [054/100]
+===============================
+[registration_loss]: [-0.995420]
+[reconstruction_loss]: [0.729274]
+[train_ssim]: [0.608035]
+[train_psnr]: [30.442228]
+[valid_ssim]: [0.574592]
+[valid_psnr]: [29.772266]
+
+2022-08-25 14:29:30,787 
+===============================
+  [ModelCheckpoint] [054/100]
+===============================
+[valid_psnr] Maintained: Current is [29.77227] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.57459] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:29:30,829 
+===============================
+  [ModelCheckpoint] [054/100]
+===============================
+[valid_psnr] Maintained: Current is [29.77227] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.57459] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:29:30,830 
+===============================
+  [BaseLogger] [054/100]
+===============================
+[registration_loss]: [-0.995420]
+[reconstruction_loss]: [0.729274]
+[train_ssim]: [0.608035]
+[train_psnr]: [30.442228]
+[valid_ssim]: [0.574592]
+[valid_psnr]: [29.772266]
+
+2022-08-25 14:37:06,623 
+===============================
+  [BaseLogger] [055/100]
+===============================
+[registration_loss]: [-1.081171]
+[reconstruction_loss]: [0.717458]
+[train_ssim]: [0.584098]
+[train_psnr]: [29.821377]
+[valid_ssim]: [0.585553]
+[valid_psnr]: [29.447761]
+
+2022-08-25 14:37:07,463 
+===============================
+  [ModelCheckpoint] [055/100]
+===============================
+[valid_psnr] Maintained: Current is [29.44776] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.58555] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:37:07,504 
+===============================
+  [ModelCheckpoint] [055/100]
+===============================
+[valid_psnr] Maintained: Current is [29.44776] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.58555] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:37:07,505 
+===============================
+  [BaseLogger] [055/100]
+===============================
+[registration_loss]: [-1.081171]
+[reconstruction_loss]: [0.717458]
+[train_ssim]: [0.584098]
+[train_psnr]: [29.821377]
+[valid_ssim]: [0.585553]
+[valid_psnr]: [29.447761]
+
+2022-08-25 14:44:41,762 
+===============================
+  [BaseLogger] [056/100]
+===============================
+[registration_loss]: [-1.071853]
+[reconstruction_loss]: [0.719022]
+[train_ssim]: [0.589938]
+[train_psnr]: [29.778042]
+[valid_ssim]: [0.582663]
+[valid_psnr]: [29.443492]
+
+2022-08-25 14:44:42,886 
+===============================
+  [ModelCheckpoint] [056/100]
+===============================
+[valid_psnr] Maintained: Current is [29.44349] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.58266] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:44:42,937 
+===============================
+  [ModelCheckpoint] [056/100]
+===============================
+[valid_psnr] Maintained: Current is [29.44349] Best is [32.20012] in Epoch [00042] 
+[valid_ssim] Maintained: Current is [0.58266] Best is [0.90255] in Epoch [00020] 
+
+2022-08-25 14:44:42,938 
+===============================
+  [BaseLogger] [056/100]
+===============================
+[registration_loss]: [-1.071853]
+[reconstruction_loss]: [0.719022]
+[train_ssim]: [0.589938]
+[train_psnr]: [29.778042]
+[valid_ssim]: [0.582663]
+[valid_psnr]: [29.443492]
+
